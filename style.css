@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Reset */
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color: linear gradient; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    background-color: #f7f7f7;
+    /* color: #333; */
+    padding: 20px;
+    /* background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 128, 0.6) 100%);
+    color: white; */
+    background: linear-gradient(180deg, rgba(255, 94, 77, 0.8) 0%, rgba(255, 159, 67, 0.7) 100%);
+    color: white;
+    overflow: auto;
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(135, 206, 235, 0.5) 100%);
+    color: black; */
+    /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(105, 105, 105, 0.8) 100%);
+    color: white; */
+
+
+}
+
+/* Body and container setup */
+
+
+.container {
+    /* max-width: 450px;
+    margin: 0 auto;
+    background-color:#111;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+
+    background: #111;
+    /* background: rgba(0, 0, 0, 0.6); */
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 40%;
+    min-width: 300px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow:auto;
+}
+
+/* h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+    animation:yash s ease-in-out 3s 1;
+}
+
+@keyframes yash
+{
+    0%
+    {
+        color:Red;
+    }
+    50%
+    {
+        yellow: yellow;
+    }
+    100%
+    {
+        color:green;
+    }
+} */
+
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #fff; /* Default color */
+    margin-bottom: 20px;
+    animation: rainbowWave 3s linear infinite; /* Continuous animation with smooth transitions */
+}
+
+@keyframes rainbowWave {
+    0% {
+        color: red;
+    }
+    16.66% {
+        color: orange;
+    }
+    33.33% {
+        color: yellow;
+    }
+    50% {
+        color: green;
+    }
+    66.66% {
+        color: blue;
+    }
+    83.33% {
+        color: indigo;
+    }
+    100% {
+        color: violet;
+    }
+}
+
+
+/* Input and button styling */
+#search {
+    display: block; /* Makes the input a block element */
+    margin: 0 auto; /* This centers the input horizontally */
+    width: 90%; /* Set a width (adjust as needed) */
+    max-width: 600px; /* Optional: Limit the maximum width */
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    
+    transition: border-color 0.3s ease;
+}
+
+#search:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#search-btn {
+    display:block;
+    margin:0 auto;
+    width: 30%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3 ease
+   
+
+    
+}
+
+#search-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+
+}
+
+/* Movie results container */
+.movie-results {
+    margin-top: 20px;
+}
+
+.movie-results .movie-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.movie-results .movie-item img {
+    width: 80px;
+    height: 120px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.movie-results .movie-item .movie-info {
+    flex: 1;
+}
+
+.movie-results .movie-item .movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: aqua;
+    margin-bottom: 5px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+}
+
+.movie-results .movie-item .movie-overview {
+    font-size: 14px;
+    color: white;
+    line-height: 1.5;
+    max-height: 60px;
+    overflow: auto;
+}
+
+/* Movie details container */
+.movie-details-container {
+    display: none;
+    margin-top: 30px;
+}
+
+.movie-details-container .movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details-container .movie-details img {
+    width: 250px;
+    height: 375px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.movie-details-container .movie-details .movie-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.movie-details-container .movie-details .movie-overview {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+}
+
+
+i
+{
+    color:#fff;
+    font-size:20px;
+    font-weight:bolder;
+}
+
+.back_button
+{
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    text-align:center;
+    position:relative;
+    top:10px;
+    
+}
+
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back-button:focus {
+    outline: none; /* Remove outline when focused */
+}
